@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="row pt-5">
+  <div class="col-2" onclick="window.location='{% url 'detail' product.id %}';" style="cursor: pointer;">
+    <img src="{{product.icon.url}}" class="img-fluid">
+
+  </div>
+  <div class="col-7" onclick="window.location='{% url 'detail' product.id %}';" style="cursor: pointer;">
+  <h1>Good Year</h1>
+    <p>Best quality.Best quality.Best quality.Best quality.Best quality.Best quality.Best quality.</p>
+
+  </div>
+
+{% endblock %}
