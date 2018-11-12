@@ -1,35 +1,35 @@
 {% extends 'base.html'%}
 
 {% block content %}
-{% for inventory in inventorys.all %}
-<div class="row pt-5">
-  <div class="col-2" onclick="window.location='{% url 'detail' inventory.id %}';" style="cursor: pointer;">
-    <img src="{{inventory.image.url}}" class="img-fluid">
-
-  </div>
-  <div class="col-7" onclick="window.location='{% url 'detail' inventory.id %}';" style="cursor: pointer;">
-  <h1>{{inventory.brand}}</h1>
-    <p>{{inventory.summary}}</p>
-
-  </div>
-  <div class="col-3">
-    <a href="javascript:{document.getElementById('edit{{inventory.id}}').submit()}"><button class="btn btn-primary btn-lg btn-block">Edit</button></a>
-    <a href="javascript:{document.getElementById('delete{{inventory.id}}').submit()}"><button class="btn btn-primary btn-lg btn-block">Delete</button></a>
-
-  </div>
+<div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class="display-4"> Inventory</h1>
+        </div>
+        <hr>
+    </div>
 </div>
-<form id="edit{{inventory.id}}"  method="POST" action="{% url 'edit' inventory.id %}">
-  {% csrf_token %}
-  <input type="hidden">
+<div class="container-fluid padding">
+  <div class="row padding">
+    {% for inventory in inventorys.all %}
+    <div class="col-md-4 invent">
 
-</form>
-<form id="delete{{inventory.id}}"  method="POST" action="{% url 'delete' inventory.id %}">
-  {% csrf_token %}
-  <input type="hidden">
+      <div class="card">
+        <img src="{{inventory.image.url}}" class="img-fluid" onclick="window.location='{% url 'detail' inventory.id %}';" style="cursor: pointer;">
+        <div class="card-body">
+          <h4 class="card-title">{{inventory.brand}}</h4>
+          <p>{{inventory.summary}}</p>
+        </div>
+        <a href="{% url 'detail' inventory.id %}">
+        <button type="button" class="btn btn-primary btn-lg" name="button"> Details</button>
+        </a>
 
-</form>
+      </div>
+    </div>
+    {% endfor %}
 
+  </div>
 
-{% endfor %}
+</div>
 
 {% endblock %}

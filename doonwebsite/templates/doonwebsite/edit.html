@@ -11,8 +11,24 @@
 
 <form method="POST" action="" enctype="multipart/form-data">
   {% csrf_token%}
-{{form.as_p}}
-  <input class="btn btn-primary" type="submit" value="Edit Inventory" />
+  Title:
+  <br/>
+  <input type="text" name="title"  value="{{inventory.title}}"/>
+  <br/ >
+  Brand:
+  <br/>
+  <input type="text" name="brand" value="{{inventory.brand}}"/>
+  <br/ >
+  Body:
+  <br/>
+  <input type="textbox" name="body" value="{{inventory.body}}" />
+  <br/ >
+  Image:
+  <br/>
+  <input type="file" name="image" value="{{inventory.image.url}}" />
+  <br/>
+  <br/>
+  <input class="btn btn-primary" type="submit" value="Update" />
 
 </form>
 

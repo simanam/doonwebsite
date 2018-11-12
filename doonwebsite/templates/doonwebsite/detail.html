@@ -1,36 +1,24 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<div class="row">
+<div class="container-fluid padding detail">
+  <div class="row padding">
+    <div class="col-lg-6">
+      <img src="{{inventory.image.url}}" class="img-fluid">
+    </div>
+    <div class="col-lg-6">
+      <h1>{{inventory.title}}</h1>
+      <h3>{{inventory.brand}}</h3>
+      <p>{{inventory.body}}</p>
+      <br>
+      <a href="{% url 'inventory' %}">
+      <button type="button" class="btn btn-primary btn-lg" name="button"> Back</button>
+      </a>
 
-  <div class="col-10">
-    <h1>{{inventory.title}}</h1>
+    </div>
 
   </div>
-  <div class="col-10">
-    <h3>{{inventory.brand}}</h3>
 
-  </div>
 </div>
-<div class="row">
-  <div class="col-8">
-    <img src="{{inventory.image.url}}" class="img-fluid">
-  </div>
-
-</div>
-<div class="row pt-2">
-  <div class="col-4 text-right">
-    <h4> <span class="oi oi-clock"></span> {{inventory.pub_date_pretty}}</h4>
-
-  </div>
-</div>
-<div class="row">
-  <div class="col-8">
-    <p>{{inventory.body}}</p>
-
-  </div>
-</div>
-
-
 
 {% endblock %}

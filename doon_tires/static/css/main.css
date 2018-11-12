@@ -244,3 +244,37 @@ blockquote::after{
 .profile:hover{
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
+.serv:hover{
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+.detail img{
+    height: 550px;
+    width: 100%;
+
+    border: #ba2035 solid 20px;
+}
+.padding{
+  padding: 1rem;
+}
+.detail button{
+    background-color: #ba2035;
+    border: #ba2035;
+    width: 100px;
+}
+.invent img{
+
+    height: 400px;
+
+}
+.invent button{
+
+
+    background-color: #ba2035;
+    color: #efefef;
+    border: #ba2035;
+}
+.invent card{
+
+    border: 2px solid #ba2035;
+    margin-top: 30px;
+}

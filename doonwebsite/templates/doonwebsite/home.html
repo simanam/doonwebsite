@@ -16,7 +16,7 @@
       <div class="carousel-caption">
         <h1 class="display-2">Making your ride smooth</h1>
 
-        <a href="{{inventory}}">
+        <a href="{% url 'inventory' %}">
           <button type="button" class="btn btn-primary btn-lg" name="button"> Inventroy</button>
         </a>
       </div>
@@ -54,7 +54,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 serv">
         <div class="card mb-4 shadow-sm">
           <img class="card-img-top" src="{% static 'images/imagetire.jpg' %}" alt="Card image cap">
           <div class="card-body">
@@ -65,7 +65,7 @@ Tires are critical vehicle components because they connect trucks and trailers t
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 serv">
         <div class="card mb-4 shadow-sm">
           <img class="card-img-top" src="{% static 'images/imaget1.jpg' %}" alt="Card image cap">
           <div class="card-body">
@@ -75,7 +75,7 @@ Tires are critical vehicle components because they connect trucks and trailers t
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 serv">
         <div class="card mb-4 shadow-sm">
           <img class="card-img-top" src="{% static 'images/imaget3.jpg' %}" alt="Card image cap">
           <div class="card-body">

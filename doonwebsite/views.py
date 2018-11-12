@@ -38,9 +38,19 @@ def detail(request, inventory_id):
 
     return render(request, 'doonwebsite/detail.html', {'inventory':inventory})
 
-def edit(request, inventory_id):
-    if request.method == 'POST':
-        product = get_object_or_404(Product, pk=product_id)
-        product.votes_total += 1
-        product.save()
-        return redirect('/products/'+ str(product.id))
+# def edit(request, inventory_id):
+#     if request.method == 'POST':
+#         inventory = get_object_or_404(Inventory, pk=inventory_id)
+#         inventory.title = request.POST['title']
+#         inventory.brand = request.POST['brand']
+#         inventory.body = request.POST['body']
+#         inventory.image = request.FILES['image']
+#         inventory.save()
+#         return redirect('/inventorys/'+ str(inventory.id))
+#
+# def delete(request, inventory_id):
+#     inventory = get_object_or_404(Inventory, pk=inventory_id)
+#     inventory.delete()
+#     inventory.save()
+#
+#     return redirect('/inventory/')
